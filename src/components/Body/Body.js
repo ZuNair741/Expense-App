@@ -10,6 +10,7 @@ export default function Body({}) {
         <h1 id="history">Transaction History</h1>
         <table>
           {store.transaction.map((trans, index) => {
+            console.log(trans, "alskdjf");
             return (
               <tr className={trans.type}>
                 <td>{trans.purpose}</td>
@@ -17,7 +18,7 @@ export default function Body({}) {
                 <td>
                   <button
                     onClick={() => {
-                      dsiaptch(removeItem(trans));
+                      dsiaptch(removeItem(trans.id));
                     }}
                   >
                     Delete

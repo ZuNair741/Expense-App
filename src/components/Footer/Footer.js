@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import { v4 as uuidv4 } from "uuid";
+
 import "./Footer.css";
 import { useDispatch } from "react-redux";
 import { addTransaction } from "../../store/slice";
@@ -13,7 +15,7 @@ export default function Footer() {
     } else {
       details.type = "expense";
     }
-    dispatch(addTransaction(details));
+    dispatch(addTransaction({ ...details, id: uuidv4() }));
     reset();
   };
 
