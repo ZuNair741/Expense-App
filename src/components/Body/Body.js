@@ -1,0 +1,33 @@
+import { useDispatch, useSelector } from "react-redux";
+import "./body.css";
+import { removeItem } from "../../store/slice";
+export default function Body({ parentData }) {
+  let dsiaptch = useDispatch();
+  const store = useSelector((store) => store.Transactions);
+  return (
+    <>
+      <div id="box">
+        <h1 id="history">Transaction History of {parentData}</h1>
+        <table>
+          {store.transaction.map((trans, index) => {
+            return (
+              <tr className={trans.type}>
+                <td>{trans.purpose}</td>
+                <td>{trans.amount}</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      dsiaptch(removeItem(trans));
+                    }}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+        </table>
+      </div>
+    </>
+  );
+}

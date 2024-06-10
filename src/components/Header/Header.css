@@ -1,0 +1,23 @@
+#mainBox {
+  position: relative;
+  top: 20px;
+  /* border: 1px solid red; */
+}
+#blncBox {
+  margin-left: 22%;
+}
+#blnc {
+  margin-left: 42%;
+}
+#showBalance{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+#expnsBox{
+  margin-left: 7%;
+}
+#income,#expense{
+  margin-left: 15%;
+}

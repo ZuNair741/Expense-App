@@ -1,0 +1,15 @@
+#transactionBox {
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+#heading {
+  margin-left: 19%;
+}
+#textBox,
+#amountBox {
+  font-size: 20px;
+  font: bold;
+  height: 20px;
+  width: 70%;
+}
