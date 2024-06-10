@@ -6,12 +6,10 @@ import { useEffect, useState } from "react";
 import { randomIntFromInterval } from "./components/utils/ramdonNumberGenerator";
 
 function App() {
-  const [parentData, setParentData] = useState("Zunair");
-
   return (
     <>
-      <Header parent={parentData} setParentData={setParentData} />
-      <Body parentData={parentData} />
+      <Header />
+      <Body />
       <Footer />
     </>
   );

@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./body.css";
 import { removeItem } from "../../store/slice";
-export default function Body({ parentData }) {
+export default function Body({}) {
   let dsiaptch = useDispatch();
   const store = useSelector((store) => store.Transactions);
   return (
     <>
       <div id="box">
-        <h1 id="history">Transaction History of {parentData}</h1>
+        <h1 id="history">Transaction History</h1>
         <table>
           {store.transaction.map((trans, index) => {
             return (
